@@ -10,37 +10,6 @@ namespace TestProjectDesktop
     {
         static void Main(string[] args)
         {
-            //var count = 5;
-            //Console.WriteLine(count);
-            //var sir = 5;
-            //Console.WriteLine(sir);
-            //var s = "How do you do?";
-            //Console.WriteLine(s);
-            //var date = DateTime.Now;
-            //Console.WriteLine(date);
-            //var a = Console.ReadLine();
-            //var R = 25;
-            //var S = (R + a);
-            //Console.WriteLine(S);
-            //Console.WriteLine();
-            //var num = double.Parse(Console.ReadLine());
-            //num = num * 2;
-            //Console.WriteLine(num);
-            //var a = int.Parse(Console.ReadLine());
-            //var area = a * a;
-            //Console.WriteLine(area);
-            //Console.Write("He");
-            //Console.Write("llo");
-            //Console.WriteLine("!");
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //Console.WriteLine("THE END");
-
-            //var name = Console.ReadLine();
-            //Console.Write("Hello, ");
-            //Console.WriteLine(name);
-
-           
             var name = Console.ReadLine();
             Console.WriteLine("Hello, {0}!", name);
         }
