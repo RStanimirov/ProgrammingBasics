@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _06_BonusScore
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter Score: ");
+            var num = double.Parse(Console.ReadLine());
+            var bonus = 0.0;
+            if (num > 1000)
+                {
+                bonus = num * 0.10;
+            }
+            else if (num > 100)
+                    {
+                bonus = num * 0.20;
+            }
+            else if (num <= 100)
+                        {
+                bonus = 5;
+            }
+            if (num % 2 == 0)
+            {
+                bonus ++ ;
+            }
+            else if (num % 10 == 5)
+            {
+                bonus += 2;
+            }
+            Console.WriteLine("Bonus Score: " + bonus);
+            Console.WriteLine("Total Score: " + (bonus + num));
+        }
+    }
+}

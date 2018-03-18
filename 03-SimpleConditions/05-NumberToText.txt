@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _05_Number0_9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var num = int.Parse(Console.ReadLine());
+            if (num == 1.0)
+            {
+                Console.WriteLine("one");
+            }
+            else if (num == 2.0)
+            {
+                Console.WriteLine("two");
+            }
+            else if (num > 9.0)
+            {
+                Console.WriteLine("number too big");
+            }
+        }
+    }
+}
