@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _12_Volleybal
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string year = Console.ReadLine().ToLower();
+            int holidays = int.Parse(Console.ReadLine());
+            int weekendsHome = int.Parse(Console.ReadLine());
+
+            double weekendsSofia = (((48 - weekendsHome) * 3.0 / 4) + (holidays * 2.0 / 3));
+            double totalPlay = weekendsHome + weekendsSofia;
+
+            if (year == "leap")
+            {
+                Console.WriteLine(Math.Truncate(totalPlay + (totalPlay * 0.15)));
+            }
+            else if(year == "normal")
+            {
+                Console.WriteLine(Math.Truncate(totalPlay));
+            }
+
+        }
+    }
+}

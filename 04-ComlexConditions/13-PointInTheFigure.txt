@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _13_PointsFigure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int h = int.Parse(Console.ReadLine());
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+
+            bool leftSide = (x == 0 && y >= 0 && y <= h);
+            bool leftSideTop = (x == h && y >= h && y <= 4 * h);
+            bool rightSide = (x == 3 * h && y >= 0 && y <= h);
+            bool rightSideTop = (x == 2 * h && y >= h && y <= 4 * h);
+
+            bool topSide = (x >= h && x <= 2 * h && y == 4 * h);
+            bool topSideLeft = (x >= 0 && x <= h && y == h);
+            bool topSideRight = (x >= 2 * h && x <= 3 * h && y == h);
+            bool bottomSide = (x >= 0 && x <= 3 * h && y == 0);
+
+            if ((x > 0 && x < 3 * h && y > 0 && y < h) || (x > h && x < 2 * h && y > h && y < 4 * h) || (x > h && x < 2 * h && y == h))
+            {
+                Console.WriteLine("inside");
+            }
+            else if (topSide || bottomSide || topSideLeft || topSideRight || leftSide || rightSide || leftSideTop || rightSideTop)
+            {
+                Console.WriteLine("border");
+            }
+            else
+            {
+                Console.WriteLine("outside");
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _11_Cinema
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string typeMovie = Console.ReadLine().ToLower();
+            var rows = int.Parse(Console.ReadLine());
+            var coll = int.Parse(Console.ReadLine());
+            var full = rows * coll;
+            double income = -1.0;
+
+            switch (typeMovie)
+            {
+                case "premiere": income = full * 12.00; break;
+                case "normal": income = full * 7.50; break;
+                case "discount": income = full * 5.00; break;
+            }
+            Console.WriteLine("{0:f2}", income);
+
+        }
+    }
+}
