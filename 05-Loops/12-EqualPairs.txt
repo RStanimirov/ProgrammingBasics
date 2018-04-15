@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _12_EqualPairs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            double firstPair = 0;
+            double secondPair = 0;
+            double difference = 0;
+            double maxDifference = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                double firstNumber = double.Parse(Console.ReadLine());
+                double secondNumber = double.Parse(Console.ReadLine());
+
+                if (i == 1)
+                {
+                    firstPair = firstNumber + secondNumber;
+                }
+                else
+                {
+                    secondPair = firstNumber + secondNumber;
+
+                    difference = Math.Abs(secondPair - firstPair);
+
+                    if (difference > maxDifference)
+                    {
+                        maxDifference = difference;
+                    }
+                    firstPair = secondPair;
+                }
+            }
+
+            if (maxDifference == 0)
+            {
+                Console.WriteLine("Yes, value = {0}", firstPair);
+            }
+            else
+            {
+                Console.WriteLine("No, maxdiff = {0}", maxDifference);
+            }
+        }
+    }
+}

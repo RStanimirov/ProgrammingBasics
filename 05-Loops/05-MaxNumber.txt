@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _06_MaxNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = int.Parse(Console.ReadLine());
+            var maxValue = int.MinValue;
+
+            for (int i = 1; i <= n; i++)
+            {
+                var number = int.Parse(Console.ReadLine());
+                if (number > maxValue)
+                {
+                    maxValue = number;
+                }
+            }
+            Console.WriteLine(maxValue);
+        }
+    }
+}
